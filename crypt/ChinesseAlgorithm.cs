@@ -10,17 +10,15 @@ namespace crypt
 {
     public class ChinesseAlgorithm
     {
-        public static void count(int size)
+        public static int count(List<int> b, List<int>m)
         {
-            int[] b = new int[size];
-            int[] m = new int[size];
+            int size = b.Count;
             int M = 1;
             bool check = true;
 
             for(int i = 0; i<size;i++)
             {
-                b[i] = Convert.ToInt32(Console.ReadLine());
-                m[i] = Convert.ToInt32(Console.ReadLine());
+
                 M *= m[i];
                 if (i > 0 && i < size - 1)
                     if (GCD.countGcd(m[i - 1], m[i]) != 1)
@@ -41,14 +39,15 @@ namespace crypt
                 {
                     x = x % M;
 
-
                 }
                 Console.WriteLine($"{x} +{ M}t");
-
+                return x;
             }
             else
             {
                 Console.WriteLine("Null");
+                return -1;
+
             }
         }
     }
