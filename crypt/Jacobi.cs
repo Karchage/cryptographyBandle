@@ -8,38 +8,60 @@ namespace crypt
 {
     public class Jacobi
     {
-        public static int calcJacobi(int a, int n)
+        public static Nullable<int> calcJacobi(int firstNumber, int secondNumber)
         {
-            a = a % n;
-            int t = 1;
-            while( a != 0)
+            try
             {
-                while(a % 2 == 0)
+                if (!mutualSimplicity(firstNumber, secondNumber))
                 {
-                    a = a / 2;
-                    int r = n % 8;
-                    if(r == 3 || r == 5)
+                    throw new Exception("Error - not mutual simplicity number");
+                }
+                firstNumber = firstNumber % secondNumber;
+                int t = 1;
+                while (firstNumber != 0)
+                {
+                    while (firstNumber % 2 == 0)
+                    {
+                        firstNumber = firstNumber / 2;
+                        int r = secondNumber % 8;
+                        if (r == 3 || r == 5)
+                        {
+                            t = -t;
+                        }
+                    }
+                    int temp = firstNumber;
+                    firstNumber = secondNumber;
+                    secondNumber = temp;
+                    if (firstNumber % 4 == 3 && secondNumber % 4 == 3)
                     {
                         t = -t;
                     }
+                    firstNumber = firstNumber % secondNumber;
                 }
-                int temp = a;
-                a = n;
-                n = temp;
-                if (a % 4 == 3 && n % 4 == 3)
+                if (secondNumber == 1)
                 {
-                    t = -t;
+                    return t;
                 }
-                a = a % n;
+                else
+                {
+                    return null;
+                }
+
             }
-            if(n == 1)
+            catch (Exception ex)
             {
-                return t;
+                Console.WriteLine(ex.Message);
+                return null;
             }
-            else
+
+        }
+        static bool mutualSimplicity(int a, int b)
+        {
+            if (GCD.countGcd(a, b) == 1)
             {
-                return 10000;
+                return true;
             }
+            else return false;
         }
     }
 }

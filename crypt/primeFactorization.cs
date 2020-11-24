@@ -11,7 +11,7 @@ namespace crypt
         static public Dictionary<int,int> count(int num)
         {
             int div = 2;
-            Console.WriteLine($"{num} = ");
+            Console.Write($"{num} = ");
             Dictionary<int, int> mp = new Dictionary<int, int>();
             while (num > 1)
             {
@@ -24,9 +24,17 @@ namespace crypt
                 if(i!=0)
                 {
                     mp.Add(div, i);
-                    Console.Write("*" + div + "^" + i);
+                    //Console.Write("*" + div + "^" + i);
                 }
                 div++;
+            }
+            foreach(var item in mp)
+            {
+                Console.Write($"{item.Key}^{item.Value}");
+                if(item.Key != mp.Keys.Last())
+                {
+                    Console.Write(" * ");
+                }
             }
             return mp;
         }

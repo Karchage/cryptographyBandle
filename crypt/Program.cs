@@ -8,11 +8,13 @@ namespace crypt
     {
         static void Main(string[] args)
         {
+
             //Console.WriteLine($"GCD(1234,54) = {GCD.countGcd(1234, 54)}");
             //Console.WriteLine($"GCD(123,5) = {GCD.countGcd(123, 5)}");
             //Console.WriteLine($"GCD(505,45) = {GCD.countGcd(505, 5)}");
             //Console.WriteLine($"GCD(287,4) = {GCD.countGcd(287, 7)}");
             //Console.WriteLine($"GCD(18,6) = {GCD.countGcd(55, 25)}");
+
             //int x, y;
             //Console.WriteLine(1234);
             //Console.WriteLine(54);
@@ -29,17 +31,24 @@ namespace crypt
             //Console.WriteLine($"GCD(387,7) = {decompositionGCD.countDegGCD(387, 7, out x, out y)}");
             //Console.WriteLine($"(387,7) = 387 * {x} + 7 * {y}");
 
-
+            //Console.WriteLine("Finding prime number: 225");
             //primeNumber.search(225);
+
             //Dictionary<int, int> mp = new Dictionary<int, int>();
             //mp = primeFactorization.count(12480);
-            //primeFactorization.count(12480);
-            //primeFactorization.count(65521);
-            Console.WriteLine($"(1) = {EulerFunction.calcEulerFunction(1)}");
-            Console.WriteLine($"(1234) = {EulerFunction.calcEulerFunction(1234)}");
-            Console.WriteLine($"(874) = {EulerFunction.calcEulerFunction(874)}");
-            Console.WriteLine($"(84848) = {EulerFunction.calcEulerFunction(84848)}");
-            Console.WriteLine($"(364) = {EulerFunction.calcEulerFunction(364)}");
+            //Console.WriteLine();
+            //mp = primeFactorization.count(58585);
+            //Console.WriteLine();
+            //mp = primeFactorization.count(722772);
+            //Console.WriteLine();
+            //mp = primeFactorization.count(123);
+
+
+            //Console.WriteLine($"(1) = {EulerFunction.calcEulerFunction(1)}");
+            //Console.WriteLine($"(1234) = {EulerFunction.calcEulerFunction(1234)}");
+            //Console.WriteLine($"(874) = {EulerFunction.calcEulerFunction(874)}");
+            //Console.WriteLine($"(84848) = {EulerFunction.calcEulerFunction(84848)}");
+            //Console.WriteLine($"(364) = {EulerFunction.calcEulerFunction(364)}");
             //Console.WriteLine(reverseElement.calcReverseElem(250, 12480));
             //Console.WriteLine(reverseElement.calcReverseElem(65537, 78408));
             //Console.WriteLine(reverseElement.calcReverseElem(110, 17));
@@ -55,14 +64,26 @@ namespace crypt
             //Console.WriteLine($"{ res2.firstNumberResult} , { res2.secondNumberResult}");
             //ChinesseAlgorithm.count(2);
 
-            //Console.WriteLine(Jacobi.calcJacobi(26,126)); // -
-            //Console.WriteLine(Jacobi.calcJacobi(47, 125)); // +
+            //Console.Write("first number = 47, second number = 138 Response: ");
+            //Console.WriteLine(Jacobi.calcJacobi(47, 138)); // +
+            //Console.Write("first number = 532, second number = 2739 Response: ");
             //Console.WriteLine(Jacobi.calcJacobi(532, 2739)); // +
-            //Console.WriteLine(Jacobi.calcJacobi(2204, 381)); //+
+            //Console.Write("first number = 204, second number = 31 Response: ");
+            //Console.WriteLine(Jacobi.calcJacobi(204, 31)); //+
+            //Console.Write("first number = 25, second number = 125 Response: ");
+            //Console.WriteLine(Jacobi.calcJacobi(25, 125)); // -
 
-            //Console.WriteLine(LegendreSymbol.caltSymbol(-27,7)); //+
-            //Console.WriteLine(LegendreSymbol.caltSymbol(12345,331));//+
-            //Console.WriteLine(LegendreSymbol.caltSymbol(-131,283));//+
+            //Console.Write("a = 133, p = 182 Response: ");
+            //Console.WriteLine(LegendreSymbol.caltSymbol(133, 182));
+            //Console.Write("a = -149, p = 157 Response: ");
+            //Console.WriteLine(LegendreSymbol.caltSymbol(-149, 157));
+            //Console.Write("a = -10, p = 120 Response: ");
+            //Console.WriteLine(LegendreSymbol.caltSymbol(-10, 120));
+            //Console.Write("a = 12345, p = 1234 Response: ");
+            //Console.WriteLine(LegendreSymbol.caltSymbol(12345, 1234));
+            //Console.Write("a = 121, p = 157 Response: ");
+            //Console.WriteLine(LegendreSymbol.caltSymbol(121, 157));
+
 
             //FindingDeduction.countDeduction(2, 5432675, 13); //+
             //FindingDeduction.countDeduction(3, 95813, 17); // +

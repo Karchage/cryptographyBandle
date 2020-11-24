@@ -44,7 +44,7 @@ namespace crypt
             return 0;
         }
 
-        static bool trial_div(int n)
+        static public bool trial_div(int n)
         {
             int r = 2;
             while(r<Math.Sqrt(n))
@@ -55,23 +55,6 @@ namespace crypt
                 }
                 else r++;
             }
-            return true;
-        }
-
-        static bool Miller_Rabin_test(int n)
-        {
-            int t = n - 1;
-            int s = 0;
-            while(t>0)
-            {
-                if (t % 2 == 0)
-                {
-                    s++;
-                    t = t / 2;
-                }
-                else break;
-            }
-
             return true;
         }
 

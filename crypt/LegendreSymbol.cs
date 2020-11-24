@@ -8,22 +8,39 @@ namespace crypt
 {
     public class LegendreSymbol
     {
-        static public int caltSymbol(int a,int p )
+        static public Nullable<int> caltSymbol(int a,int p )
         {
-            if( a== 1)
+            try
             {
-                return 1;
+                if(!FindingDeduction.trial_div(p))
+                {
+                    throw new Exception("Error - Composite number");
+                }
+                else
+                {
+                    if (a == 1)
+                    {
+                        return 1;
+                    }
+                    int? l;
+                    if (a % 2 == 0)
+                    {
+                        l = caltSymbol(a / 2, p) * (int)(Math.Pow((-1), (Math.Pow(p, 2) - 1) / 8));
+                    }
+                    else
+                    {
+                        l = caltSymbol(p % a, a) * (int)(Math.Pow((-1), ((a - 1) * (p - 1) / 4)));
+                    }
+                    return l;
+                }
+                
             }
-            int l;
-            if(a%2==0)
+            catch(Exception ex)
             {
-                l = caltSymbol(a/2,p)*(int)(Math.Pow((-1), (Math.Pow(p,2)-1)/8));
+                Console.WriteLine(ex.Message);
+                return null;
             }
-            else
-            {
-                l = caltSymbol(p%a, a) * (int)(Math.Pow((-1), ((a-1)*(p-1)/4)));
-            }
-            return l;
+            
         }
     }
 }
