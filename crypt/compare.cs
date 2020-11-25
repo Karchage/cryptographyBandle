@@ -11,8 +11,7 @@ namespace crypt
         public int firstNumberResult { get; set; }
         public int secondNumberResult { get; set; }
         public static compare calcCompare(int prevX, int prevMod, int modNumber)
-        {   // a b m
-            // prevX X = prevMod(mod modNumber)
+        {   
             if(GCD.countGcd(prevX,modNumber)  != 1)
             {
                 if(prevMod % GCD.countGcd(prevX, modNumber) == 0)

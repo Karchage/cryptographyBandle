@@ -29,11 +29,12 @@ namespace crypt
                     if(check)
                     {
                         count++;
-                        Console.WriteLine($"{item.Key} - primitive {m}");
-                        Console.WriteLine($"U({m})= " + "{");
-                        for(var i = 0; i<phi;i++)
+                        Console.WriteLine();
+                        Console.WriteLine($"{item.Key} - Antiderivative root");
+                        Console.Write($"U({m})= " + "{");
+                        for (var i = 0; i < phi; i++)
                         {
-                            Console.Write(BigInteger.ModPow(item.Key,i,m));
+                            Console.Write($" {BigInteger.ModPow(item.Key, i, m)} ");
                         }
                         Console.WriteLine("}");
                     }
@@ -41,7 +42,7 @@ namespace crypt
             }
             if(count ==0)
             {
-                Console.WriteLine("No primitive");
+                Console.WriteLine(" - Not antiderivative root");
             }
         }
 

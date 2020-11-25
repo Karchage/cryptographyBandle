@@ -32,7 +32,7 @@ namespace crypt
                 for (int i =0;i<size;i++)
                 {
                     Mi[i] = M / m[i];
-                    Yi[i] = reverseElement.calcReverseElem(Mi[i], m[i]);
+                    Yi[i] = (int)reverseElement.calcReverseElem(Mi[i], m[i]);
                     x += b[i] * Mi[i] * Yi[i] % M;
                 }
                 if(x>M)
@@ -40,12 +40,12 @@ namespace crypt
                     x = x % M;
 
                 }
-                Console.WriteLine($"{x} +{ M}t");
+                Console.WriteLine($"{x} + { M}t");
                 return x;
             }
             else
             {
-                Console.WriteLine("Null");
+                Console.WriteLine("No solution");
                 return -1;
 
             }

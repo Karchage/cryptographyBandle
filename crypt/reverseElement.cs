@@ -9,21 +9,30 @@ namespace crypt
 {
     static public class reverseElement
     {
-        static public int calcReverseElem(int firstNumber, int secondNumber)
+        static public Nullable<int> calcReverseElem(int firstNumber, int secondNumber)
         {
-            if(GCD.countGcd(firstNumber, secondNumber) != 1)
+            try
             {
-                return 0;
-            }
-            else
-            {
-                int x,y, gcd = decompositionGCD.countDegGCD(firstNumber, secondNumber,out x,out y);
-                while(x < 0)
+                if (GCD.countGcd(firstNumber, secondNumber) != 1)
                 {
-                    x = x + secondNumber;
+                    throw new Exception("Error - Not found reverse element");
                 }
-                return x;
+                else
+                {
+                    int x, y, gcd = decompositionGCD.countDegGCD(firstNumber, secondNumber, out x, out y);
+                    while (x < 0)
+                    {
+                        x = x + secondNumber;
+                    }
+                    return x;
+                }
             }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+            
 
 
         }

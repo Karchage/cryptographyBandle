@@ -15,7 +15,7 @@ namespace crypt
             {
                     if(GCD.countGcd(a,m) == 1)
                     {
-                        Console.WriteLine($"{a}^{k}(mod{m})={a}^{k%(m-1)}(mod{m}){BigInteger.ModPow(a,k%(m-1),m)}"); // a^k(mod m ) = a ^ k%(m-1) (mod m ) = modpow(a,k%(m-1),m);
+                        Console.WriteLine($"{a}^{k}(mod{m})={a}^{k%(m-1)}(mod{m}){BigInteger.ModPow(a,k%(m-1),m)}");
                     }
                     else
                     {
@@ -35,6 +35,7 @@ namespace crypt
                     mi.Add(item.Key);
                     b.Add((int)Math.Pow(a, k % (item.Key-1)));
                 }
+                Console.WriteLine();
                 int x = ChinesseAlgorithm.count(b, mi);
                 if(x!=-1)
                 {
