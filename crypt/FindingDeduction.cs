@@ -15,7 +15,7 @@ namespace crypt
             {
                     if(GCD.countGcd(a,m) == 1)
                     {
-                        Console.WriteLine($"{a}^{k}(mod{m})={a}^{k%(m-1)}(mod{m}){BigInteger.ModPow(a,k%(m-1),m)}");
+                        Console.WriteLine($"{a}^{k}(mod{m})={a}^{k%(m-1)}(mod{m})={BigInteger.ModPow(a,k%(m-1),m)}");
                     }
                     else
                     {

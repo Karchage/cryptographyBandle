@@ -12,8 +12,8 @@ namespace crypt
             //Console.WriteLine($"GCD(1234,54) = {GCD.countGcd(1234, 54)}");
             //Console.WriteLine($"GCD(123,5) = {GCD.countGcd(123, 5)}");
             //Console.WriteLine($"GCD(505,45) = {GCD.countGcd(505, 5)}");
-            //Console.WriteLine($"GCD(287,4) = {GCD.countGcd(287, 7)}");
-            //Console.WriteLine($"GCD(18,6) = {GCD.countGcd(55, 25)}");
+            //Console.WriteLine($"GCD(287,7) = {GCD.countGcd(287, 7)}");
+            //Console.WriteLine($"GCD(55,25) = {GCD.countGcd(55, 25)}");
 
             //int x, y;
             //Console.WriteLine(1234);
@@ -44,40 +44,64 @@ namespace crypt
             //mp = primeFactorization.count(123);
 
 
-            //Console.WriteLine($"(1) = {EulerFunction.calcEulerFunction(1)}");
+            //Console.WriteLine($"(15) = {EulerFunction.calcEulerFunction(7)}");
+
+            //Console.WriteLine();
+            //for(var i = 1;i<7;i++)
+
+            //int count = 0;
+            //Console.WriteLine(i);
+            //if(Math.Pow(i, 6 / 2) % 7 != 1)
+            //{
+
+            //}
+            //if (Math.Pow(i, 6 / 3) % 7 != 1)
+            //{
+            //    count = 3;
+            //}
+
+            //Console.WriteLine(Math.Pow(i, 6 / 2) % 7);
+            //Console.WriteLine(Math.Pow(i, 6 / 3) % 7);
+            //Console.WriteLine(Math.Pow(i, 8 / 8) % 15);
+            //Console.WriteLine(count);
+
+
+
+
             //Console.WriteLine($"(1234) = {EulerFunction.calcEulerFunction(1234)}");
             //Console.WriteLine($"(874) = {EulerFunction.calcEulerFunction(874)}");
             //Console.WriteLine($"(84848) = {EulerFunction.calcEulerFunction(84848)}");
             //Console.WriteLine($"(364) = {EulerFunction.calcEulerFunction(364)}");
-            //Console.Write("25350,1243280 Response:");
-            //Console.WriteLine(reverseElement.calcReverseElem(25350, 1243280));
-            //Console.Write("637,788 Response:");
-            //Console.WriteLine(reverseElement.calcReverseElem(637, 788));
-            //Console.Write("10,8 Response:");
-            //Console.WriteLine(reverseElement.calcReverseElem(10, 8));
-            //Console.Write("536,78425 Response:");
-            //Console.WriteLine(reverseElement.calcReverseElem(536, 78425));
-            //Console.Write("875,654 Response:");
-            //Console.WriteLine(reverseElement.calcReverseElem(875, 654));
 
-            //var res = compare.calcCompare(24, 2, 1);
-            //Console.WriteLine("24х = 2(mod 1)");
+            //Console.Write("reverse element for 25350, mod 1243280 response:");
+            //Console.WriteLine(reverseElement.calcReverseElem(1, 4));
+
+
+            //Console.Write("reverse element for 637, mod 788 Response:");
+            //Console.WriteLine(reverseElement.calcReverseElem(637, 788));
+            //Console.Write("reverse element for 10, mod 8 Response:");
+            //Console.WriteLine(reverseElement.calcReverseElem(10, 8));
+            //Console.Write("reverse element for 536, mod 78425 Response:");
+            //Console.WriteLine(reverseElement.calcReverseElem(536, 78425));
+            //Console.Write("reverse element for 875, mod 654 Response:");
+            //Console.WriteLine(reverseElement.calcReverseElem(875, 654));
+            //Console.WriteLine("7х = 3(mod 9)");
+            //compare.calcCompare(7, 3, 9);
+            //Console.WriteLine();
+
             //Console.WriteLine($"x = { res.firstNumberResult}(mod{ res.secondNumberResult})");
             //Console.WriteLine($"x = { res.firstNumberResult} + { res.secondNumberResult}k");
-            //var res1 = compare.calcCompare(24, 12, 123);
+            //Console.WriteLine("10х = 15(mod 25)");
+            //compare.calcCompare(10, 15, 25);
             //Console.WriteLine();
-            //Console.WriteLine("24х = 12(mod 123)");
+
             //Console.WriteLine($"x = { res1.firstNumberResult}(mod{ res1.secondNumberResult})");
             //Console.WriteLine($"x = { res1.firstNumberResult} + { res1.secondNumberResult}k");
-            //var res2 = compare.calcCompare(24, 35, 22);
+            //Console.WriteLine("25х = 15(mod 10)");
+            //compare.calcCompare(25, 15, 10);
             //Console.WriteLine();
-            //Console.WriteLine("24х = 35(mod 22)");
-            //if (res2 != null)
-            //{
-            //    Console.WriteLine($"x = { res2.firstNumberResult}(mod{ res2.secondNumberResult})");
-            //    Console.WriteLine($"x = { res2.firstNumberResult} + { res2.secondNumberResult}k");
-            //}
-            //else Console.WriteLine("No solutions");
+
+
 
             //List<int> bi = new List<int>() { 2, 4, 7 };
             //List<int> mi = new List<int>() { 5, 6, 7 };
@@ -109,23 +133,55 @@ namespace crypt
             //Console.Write("a = 121, p = 157 Response: ");
             //Console.WriteLine(LegendreSymbol.caltSymbol(121, 157));
 
-            //Console.WriteLine("a = 45  k = 52675  m = 213 ");
-            //FindingDeduction.countDeduction(45, 52675, 213); //+
-            //Console.WriteLine();
-            //Console.WriteLine("a = 35  k = 22313  m = 182 ");
-            //FindingDeduction.countDeduction(35, 22313, 182); // +
-            //Console.WriteLine();
-            //Console.WriteLine("a = 123  k = 12345  m = 12 ");
-            //FindingDeduction.countDeduction(123, 12345, 12);// +
-            //Console.WriteLine();
-            //Console.WriteLine("a = 1  k = 2  m = 3 ");
-            //FindingDeduction.countDeduction(1, 2, 3); // -
-            //Console.WriteLine();
-            //Console.WriteLine("a = 10  k = 100  m = 1000 ");
-            //FindingDeduction.countDeduction(10, 100, 1000);// -
+            Console.WriteLine("a = 2  k = 5432675  m = 13 ");
+            FindingDeduction.countDeduction(2, 5432675, 13); //+
+            Console.WriteLine();
+            Console.WriteLine("a = 3  k = 95813  m = 17 ");
+            FindingDeduction.countDeduction(3, 95813, 17); // +
+            Console.WriteLine();
+            Console.WriteLine("a = 2  k = 6754  m = 1155 ");
+            FindingDeduction.countDeduction(2, 6754, 1155);// +
+            Console.WriteLine();
+            Console.WriteLine("a = 5  k = 765432  m = 4301 ");
+            FindingDeduction.countDeduction(5, 765432, 4301); // -
+            Console.WriteLine();
 
-            //Console.WriteLine(12);
-            //AntiderivativeRoot.countRoot(12);
+
+            //Console.WriteLine($"a X= k (mod m)");
+
+            //Console.WriteLine("a = 2  k = 5432675  m = 13 ");
+            //FindingDeduction.countDeduction(45, 27, 11);// -
+            //Console.WriteLine();
+            //Console.WriteLine("a = 3  k = 95813  m = 17 ");
+            //FindingDeduction.countDeduction(3, 95813, 17);// -
+            //Console.WriteLine();
+            //Console.WriteLine("a = 2  k = 6754  m = 1155 ");
+            //FindingDeduction.countDeduction(2, 6754, 1155);// -
+            //Console.WriteLine();
+            //Console.WriteLine("a = 3  k = 45723  m = 4862 ");
+            //FindingDeduction.countDeduction(3, 45723, 4862);// -
+            //Console.WriteLine();
+            //Console.WriteLine("a = 2  k = 14562  m = 2277 ");
+            //FindingDeduction.countDeduction(2, 14562, 2277);// -
+            //Console.WriteLine();
+            //Console.WriteLine("a = 2  k = 47385  m = 6545 ");
+            //FindingDeduction.countDeduction(2, 47385, 6545);// -
+            //Console.WriteLine();
+            //Console.WriteLine("a = 2  k = 5432675  m = 13 ");
+            //FindingDeduction.countDeduction(2, 5432675, 13);// +
+            //Console.WriteLine();
+
+            //Console.WriteLine("a = 24  k = 35  m = 2 ");
+            //FindingDeduction.countDeduction(2, 6754, 1155);// +
+            //Console.WriteLine();
+
+
+
+
+
+
+            //Console.WriteLine(13);
+            //AntiderivativeRoot.countRoot(13);
             //Console.WriteLine();
             //Console.WriteLine(11);
             //AntiderivativeRoot.countRoot(11);
@@ -142,7 +198,7 @@ namespace crypt
             //Console.WriteLine(8);
             //AntiderivativeRoot.countRoot(8);
 
-            LinearConGenerator.PrintRandom(10);
+            //LinearConGenerator.PrintRandom(10);
         }
 
     }
